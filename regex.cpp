@@ -30,7 +30,7 @@ int main(){
         cout << "\nThe text does not matches."; //This statement executes.
     }
 
-    string text3 = "call me at (720) 691 3975 or 720-691-3975 or call me at 234-456-5674  9876754398";
+    string text3 = "call me at (422) 895 6970 or 728-651-3975 or call me at 234-456-5674  9876754398";
     if(regex_search(text3,phoneNumberPattern)){
         cout << "\nPhone number found!"<<endl;
     }
