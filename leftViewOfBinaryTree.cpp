@@ -60,6 +60,16 @@ int main(){
      root->right->right->left = new Node(8);
      root->right->right->right = new Node(9);
 
-     cout <<"\nThe left view of tree \n";
+     cout <<"\nThe left view of binary tree \n";
      leftViewOfBinaryTree(root);
+
+
+/*
+
+The left view of binary tree
+1 2 4 10
+
+*/
+
+
 }
