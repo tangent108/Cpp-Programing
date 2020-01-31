@@ -56,13 +56,13 @@ int main(){
             int result = 0;
             switch(c){
                 case '+':
-                result = a+ b;
+                result = b+a;
                 break;
                 case '-':
                 result = b-a;
                 break;
                 case '*':
-                result = a* b;
+                result = b*a;
                 break;
                 case '/':
                 result = b/a;
