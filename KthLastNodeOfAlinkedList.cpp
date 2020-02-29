@@ -37,8 +37,8 @@ Third last node (index 2) has val of 7
 */
 
 
-
-int solve(LLNode* node, int k) {
+//1st way
+int solve1(LLNode* node, int k) {
     // Write your code here
     LLNode * p =node;
     int len=0;
@@ -55,4 +55,16 @@ int solve(LLNode* node, int k) {
         index++;
         node=node->next;
     }
+};
+
+//second way
+int solve2(LLNode* node, int k) {
+    // Write your codehere
+    vector<int> v;
+    while(node!=NULL){
+        v.push_back(node->val);
+        node=node->next;
+    }
+    return v[v.size()-k-1];
+   
 };
