@@ -38,21 +38,21 @@ vector<vector<int>> solve(vector<int>& nums) {
     
     vector<vector<int>> vv;
     for(int i=0;i<nums.size();i++){
-        vector<int> v;
         if(nums[i]==nums[i+1]){
+            vector<int> v1;
             int ele = nums[i];
-            v.push_back(ele);
+            v1.push_back(ele);
             while(nums[i+1]==ele){
-                v.push_back(nums[i+1]);
+                v1.push_back(nums[i+1]);
                 i++;
                 
             }
-            vv.push_back(v);
+            vv.push_back(v1);
         }
         else{
-            vector<int> v1;
-            v1.push_back(nums[i]);
-            vv.push_back(v1);
+            vector<int> v2;
+            v2.push_back(nums[i]);
+            vv.push_back(v2);
         }
        
     }
