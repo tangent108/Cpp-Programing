@@ -39,7 +39,6 @@ We have a tree that looks like (4 - 2) + 3 = 5.
 
 */
 
-
 /**
  * class Tree {
  *   public:
@@ -48,27 +47,17 @@ We have a tree that looks like (4 - 2) + 3 = 5.
  *     Tree *right;
  * };
  */
- bool IsLeaf(Tree* node) {
-    return !node->left && !node->right;
-}
-
-int ToInt(string& s) {
-    stringstream ss(s);
-    int n;
-    ss >> n;
-    return n;
-}
 
 map<string, std::function<int(int, int)>> mapa;
 
 
 
 int Calculate(Tree* node) {
-    if (!node) {
+    if (node==NULL) {
         return 0;
     }
-    if (IsLeaf(node)) {
-        return ToInt(node->val);
+    if (!node->left && !node->right) {
+        return stoi(node->val);
     }
     int left_ans = Calculate(node->left);
     int right_ans = Calculate(node->right);
@@ -92,3 +81,4 @@ int Solution::solve(Tree* root) {
     return Calculate(root);
     //return mapa["+"](10, 2);
 };
+
